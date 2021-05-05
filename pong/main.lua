@@ -236,7 +236,7 @@ function love.update(dt)
     player1.y = ball.y
     
     -- player 2 always follows ball y axis
-    player1.y = ball.y
+    player2.y = ball.y
 
     -- update our ball based on its DX and DY only if we're in play state;
     -- scale the velocity by dt so movement is framerate-independent
