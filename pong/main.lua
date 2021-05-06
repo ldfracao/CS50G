@@ -232,9 +232,8 @@ function love.update(dt)
     --
     -- paddles can move no matter what state we're in
     --
-    -- player 1 always follows ball y axis
+    -- player 1 always follows ball y axis, the second term makes the ball hit the middle of the paddle
     player1.y = ball.y - player1.height / 2
-    
     -- player 2 always follows ball y axis
     player2.y = ball.y - player2.height / 2
 
