@@ -20,6 +20,8 @@ function PlayState:init()
     self.pipePairs = {}
     self.timer = 0
     self.score = 0
+
+    -- variables used to handle "pause state"
     self.scrolling = true
     self.pause = false
 
@@ -111,7 +113,7 @@ function PlayState:update(dt)
     -- checks for second press of the p key
     elseif love.keyboard.wasPressed('p') and self.pause == true then
         sounds['unpause']:play()
-        -- checks if pause is true just so the sounds don't play at the same time
+        -- one extra step to allow the unpause to play first, not at the same time as the music
         if self.pause == true then
             sounds['music']:play()
         end
